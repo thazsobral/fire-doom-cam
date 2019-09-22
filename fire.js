@@ -1,5 +1,5 @@
 const firePixelsArray = []
-const fireWidth = 2, fireHeight = 2
+const fireWidth = 10, fireHeight = 10
 
 function start() {
   createdFireDataStructure()
@@ -19,6 +19,25 @@ function calculateFirePropagation () {
 }
 
 function renderFire () {
+  let html = '<table cellpadding=0 cellspacing=0>'
 
+  for (let row = 0; row < fireHeight; row++) {
+    html += '<tr>'
+    for (let column = 0; column < fireWidth; column++) {
+      const pixelIndex = column + ( fireWidth * row )
+      const fireIntensity = firePixelsArray[pixelIndex]
+
+      html += '<td>'
+      html += `<div class="pixel-index">${ pixelIndex }</div>`
+      html += fireIntensity
+      html += '</td>'
+    }
+
+    html += '</tr>'
+  }
+
+  html += '</table>'
+
+  document.querySelector('#fireCanvas').innerHTML = html
 }
 start()
