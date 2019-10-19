@@ -6,7 +6,7 @@ body {
   align-items: center
 }
 
-body h1 {
+#title {
   font-size: 72px;
   background: -webkit-linear-gradient(yellow, red);
   -webkit-background-clip: text;
@@ -18,8 +18,9 @@ body h1 {
 	width: 500px;
 	height: 370px;
   border: 10px #222 solid;
-  display: flex;
+
 }
+
 #fireCanvas {
   position: absolute; /*camada absoluta*/
   z-index: 10; /*coloca a camada a cima*/
@@ -29,6 +30,23 @@ body h1 {
   
   opacity: 0.5
 }
+
+#contentVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}
+
+.videoFail {
+  position: absolute;
+  z-index: 0;
+  font-size: 40px;
+  background: -webkit-linear-gradient(yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #videoElement {
   position: relative; /*camada relativa*/
 
@@ -36,6 +54,8 @@ body h1 {
 	height: 370px;
 	background-color: #666;
 }
+
+
 
 /*Style of Fire*/
 table {
