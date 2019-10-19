@@ -1,3 +1,43 @@
+/*Style of Video*/
+body {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  align-items: center
+}
+
+body h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 370px;
+  border: 10px #222 solid;
+  display: flex;
+}
+#fireCanvas {
+  position: absolute; /*camada absoluta*/
+  z-index: 10; /*coloca a camada a cima*/
+
+  width: 500px;
+	height: 370px;
+  
+  opacity: 0.5
+}
+#videoElement {
+  position: relative; /*camada relativa*/
+
+	width: 500px;
+	height: 370px;
+	background-color: #666;
+}
+
+/*Style of Fire*/
 table {
   border-collapse: collapse;
   border: 1px solid #000
@@ -15,7 +55,7 @@ td {
 }
 
 .pixel-index {
-  font-size: 10px;
+  font-size: 8px;
   display: inline-block;
   position: absolute;
   top: 2px;
@@ -24,7 +64,8 @@ td {
 }
 
 td.pixel {
-  width: 4px;
-  height: 4px;
+  
+  width: 19px;
+  height: 9.4px;
   border: 0
 }
