@@ -3,4 +3,4 @@ Código baseado no Fogo do DOOM que foi reproduzido no canal do Filipe Deschamps
 
 feat. Filipe Deschamps
 
-preview: https://thazsobral.github.io/fireDOOM/
+preview: https://thazsobral.github.io/fire-DOOM/
